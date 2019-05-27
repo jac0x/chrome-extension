@@ -1,0 +1,17 @@
+{
+	"name": "The Credit Line Company Autofill",
+	"version": "1.0",
+	"description": "The credit line company autofill extension for filling application forms",
+	"manifest_version": 2,
+
+	"permissions": ["tabs", "http://*/*", "https://*/*", "storage", "contextMenus"],
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["contentScript.js"]
+		}
+	],
+	"background": { "scripts": ["background.js"],  "persistent": true }
+
+}
